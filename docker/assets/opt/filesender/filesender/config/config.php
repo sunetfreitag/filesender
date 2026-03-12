@@ -110,8 +110,9 @@ $config['auth_sp_saml_simplesamlphp_location'] = '/opt/filesender/simplesamlphp/
 // If you want to overide the SAML simplephp configuration defaults parameter,
 // uncoment and edit the following lines
 //
-// // Authentification type ('saml' or 'shibboleth')
-$config['auth_sp_type'] = 'saml';
+// // Authentification type ('saml' or 'shibboleth' or 'header')
+$config['auth_sp_type'] = 'header';
+
 //
 // // Get email attribute from authentication service
 //$config['auth_sp_saml_email_attribute'] = 'mail';
