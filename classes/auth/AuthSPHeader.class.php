@@ -129,6 +129,7 @@ class AuthSPHeader {
             'uid' => $remoteUser,
             'email' => array(self::deriveEmail($remoteUser)),
             'name' => array(self::deriveName($remoteUser)),
+            'idp' => 'header',
         );
 
         // Add additional attributes from headers if available
@@ -243,5 +244,10 @@ class AuthSPHeader {
         }
 
         return Config::get('site_url').'#logoff-'.urlencode($target);
+    }
+
+    public static function ensureLocalIdPMetadata( $entityId, $idp, $force = false )
+    {
+        return;
     }
 }
